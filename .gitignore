@@ -1,0 +1,7 @@
+# Default ignore patterns
+/target
+**/*.rs.bk
+.env
+.env.*
+!.env.example
+Cargo.lock
