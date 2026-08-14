@@ -1,4 +1,4 @@
-# Contributing to Soroban Subscription Service
+ï»¿# Contributing to Soroban Subscription Service
 
 Thank you for contributing to the Stellar Wave Program! This guide covers everything you need to get started.
 
@@ -10,7 +10,7 @@ Be respectful, inclusive, and constructive. We follow the [Contributor Covenant]
 
 ```bash
 # Clone
-git clone https://github.com/broda-spendy/soroban-subscription-service
+git clone https://github.com/Spendyvisual/soroban-subscription-service
 cd soroban-subscription-service
 
 # Install Rust + wasm target
@@ -37,7 +37,7 @@ cargo clippy --workspace --all-targets -- -D warnings
 1. Fork the repository.
 2. Create a feature branch: `git checkout -b feat/my-feature`.
 3. Make your changes, including tests.
-4. Run `cargo test --workspace` — all tests must pass.
+4. Run `cargo test --workspace` ï¿½ all tests must pass.
 5. Run `cargo fmt --all` and `cargo clippy`.
 6. Open a Pull Request against `main`.
 
@@ -65,3 +65,4 @@ cargo clippy --workspace --all-targets -- -D warnings
 ## Questions?
 
 Open a Discussion or join the Stellar Wave Program Discord.
+

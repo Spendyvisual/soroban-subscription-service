@@ -1,4 +1,4 @@
-//! Shared types for the Soroban Subscription Service contract.
+﻿//! Shared types for the Soroban Subscription Service contract.
 use soroban_sdk::{contracttype, Address, String};
 
 /// A subscription plan defined by the SaaS provider.
@@ -75,3 +75,4 @@ pub struct Config {
     /// When true, new subscriptions and charges are blocked.
     pub paused: bool,
 }
+

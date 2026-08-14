@@ -1,8 +1,8 @@
-# Soroban Subscription Service
+ï»¿# Soroban Subscription Service
 
-> **Stellar Wave Program** — A reusable, deployable subscription billing primitive for SaaS providers on the Stellar network.
+> **Stellar Wave Program** ï¿½ A reusable, deployable subscription billing primitive for SaaS providers on the Stellar network.
 
-[![CI](https://github.com/broda-spendy/soroban-subscription-service/actions/workflows/ci.yml/badge.svg)](https://github.com/broda-spendy/soroban-subscription-service/actions/workflows/ci.yml)
+[![CI](https://github.com/Spendyvisual/soroban-subscription-service/actions/workflows/ci.yml/badge.svg)](https://github.com/Spendyvisual/soroban-subscription-service/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Stellar](https://img.shields.io/badge/Network-Stellar%20Testnet-blue)](https://stellar.org)
 [![Soroban](https://img.shields.io/badge/Runtime-Soroban-purple)](https://soroban.stellar.org)
@@ -11,7 +11,7 @@
 
 ## What is this?
 
-The **Soroban Subscription Service** is a Soroban smart contract framework that allows any SaaS provider to accept **recurring payments in XLM or USDC** natively on the Stellar network — without writing custom settlement logic.
+The **Soroban Subscription Service** is a Soroban smart contract framework that allows any SaaS provider to accept **recurring payments in XLM or USDC** natively on the Stellar network ï¿½ without writing custom settlement logic.
 
 It provides the three primitives that make subscriptions work on-chain:
 
@@ -25,10 +25,10 @@ It provides the three primitives that make subscriptions work on-chain:
 
 ## Why Soroban?
 
-- ? **Settlement in seconds** — no 2–7 day card network delays
-- ?? **~0.001 XLM per transaction** — vs 2–4% card processing fees
-- ?? **Global, permissionless** — works for anyone with a Stellar wallet
-- ?? **Non-custodial** — the contract never holds user funds; it uses SAC `transfer_from`
+- ? **Settlement in seconds** ï¿½ no 2ï¿½7 day card network delays
+- ?? **~0.001 XLM per transaction** ï¿½ vs 2ï¿½4% card processing fees
+- ?? **Global, permissionless** ï¿½ works for anyone with a Stellar wallet
+- ?? **Non-custodial** ï¿½ the contract never holds user funds; it uses SAC `transfer_from`
 
 ---
 
@@ -44,7 +44,7 @@ This release implements the **full contract ABI** with:
 - ? Full unit test suite (22 tests)
 - ? CI: build + test + clippy + audit on every push
 
-Phases 2–6 are tracked as GitHub Issues.
+Phases 2ï¿½6 are tracked as GitHub Issues.
 
 ---
 
@@ -66,7 +66,7 @@ cargo install --locked stellar-cli --features opt
 ### Build
 
 ```bash
-git clone https://github.com/broda-spendy/soroban-subscription-service
+git clone https://github.com/Spendyvisual/soroban-subscription-service
 cd soroban-subscription-service
 
 # Build for native (development)
@@ -147,21 +147,21 @@ soroban-subscription-service/
 +-- PRD.md                     # Product Requirements Document
 +-- architecture.md            # Full technical architecture
 +-- contracts/subscription/    # Soroban contract (Rust)
-¦   +-- src/
-¦       +-- lib.rs             # Contract entrypoint
-¦       +-- admin.rs           # Admin functions
-¦       +-- plan.rs            # Plan management
-¦       +-- subscription.rs    # Subscription lifecycle
-¦       +-- billing.rs         # Charge engine
-¦       +-- types.rs           # Shared types
-¦       +-- errors.rs          # Error enum
-¦       +-- events.rs          # On-chain events
-¦       +-- storage.rs         # Storage keys & TTL helpers
-¦       +-- test.rs            # Unit tests
+ï¿½   +-- src/
+ï¿½       +-- lib.rs             # Contract entrypoint
+ï¿½       +-- admin.rs           # Admin functions
+ï¿½       +-- plan.rs            # Plan management
+ï¿½       +-- subscription.rs    # Subscription lifecycle
+ï¿½       +-- billing.rs         # Charge engine
+ï¿½       +-- types.rs           # Shared types
+ï¿½       +-- errors.rs          # Error enum
+ï¿½       +-- events.rs          # On-chain events
+ï¿½       +-- storage.rs         # Storage keys & TTL helpers
+ï¿½       +-- test.rs            # Unit tests
 +-- docs/
-¦   +-- interface.md           # Full public ABI reference
-¦   +-- threat-model.md        # Security assumptions
-¦   +-- adr/                   # Architecture Decision Records
+ï¿½   +-- interface.md           # Full public ABI reference
+ï¿½   +-- threat-model.md        # Security assumptions
+ï¿½   +-- adr/                   # Architecture Decision Records
 +-- .github/workflows/ci.yml   # CI pipeline
 ```
 
@@ -188,10 +188,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). All contributions must pass CI before me
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT ï¿½ see [LICENSE](LICENSE).
 
 ---
 
 ## Stellar Wave Program
 
 This project is built as part of the [Stellar Wave Program](https://github.com/Spendyvisual), an initiative to accelerate Stellar open-source ecosystem development through incentivized contribution cycles.
+

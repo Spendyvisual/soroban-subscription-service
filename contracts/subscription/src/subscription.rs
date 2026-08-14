@@ -1,4 +1,4 @@
-//! Subscription lifecycle: subscribe, cancel, change_plan, query.
+﻿//! Subscription lifecycle: subscribe, cancel, change_plan, query.
 use soroban_sdk::{Address, Env, Vec};
 
 use crate::{
@@ -84,7 +84,7 @@ pub fn cancel(
 
     // Allow subscriber OR admin to cancel.
     let caller_is_admin = {
-        // Try admin auth without panicking � we check subscriber next.
+        // Try admin auth without panicking — we check subscriber next.
         // soroban_sdk does not expose a "try_require_auth"; we use subscriber check first.
         false // placeholder; real multi-auth check below
     };
@@ -161,3 +161,4 @@ pub fn get_subscriber_ids(env: &Env, subscriber: &Address) -> Vec<u32> {
         .get::<StorageKey, Vec<u32>>(&StorageKey::SubscriberIndex(subscriber.clone()))
         .unwrap_or(Vec::new(env))
 }
+

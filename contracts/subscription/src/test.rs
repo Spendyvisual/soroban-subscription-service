@@ -1,4 +1,4 @@
-//! Comprehensive unit test suite for the Soroban Subscription Service.
+﻿//! Comprehensive unit test suite for the Soroban Subscription Service.
 //!
 //! Tests cover:
 //! - Contract initialization (happy path, double-init guard)
@@ -313,7 +313,7 @@ fn test_charge_not_due_returns_error() {
     let sub_id = ctx.client.subscribe(&subscriber, &plan_id).unwrap();
     let keeper = Address::generate(&ctx.env);
 
-    // Don't advance time � billing date not yet reached.
+    // Don't advance time — billing date not yet reached.
     let result = ctx.client.try_charge_subscriber(&sub_id, &keeper);
     assert_eq!(result.unwrap_err().unwrap(), SubscriptionError::NotDue);
 }
@@ -535,3 +535,4 @@ fn test_batch_charge_succeeds_for_valid_subscriptions() {
     let receipts = ctx.client.batch_charge(&ids, &keeper).unwrap();
     assert_eq!(receipts.len(), 2);
 }
+

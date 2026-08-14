@@ -1,10 +1,10 @@
-//! Soroban Subscription Service — Contract Entrypoint
+ï»¿//! Soroban Subscription Service - Contract Entrypoint
 //!
 //! This contract provides a reusable, deployable subscription billing
 //! primitive for SaaS providers on the Stellar network.
 //!
 //! ## Architecture
-//! See `architecture.md` at the repository root for the full design.
+//! See architecture.md at the repository root for the full design.
 //!
 //! ## Phase 1 Note
 //! The Stellar Asset Contract (SAC) transfer_from calls in billing.rs are
@@ -155,7 +155,7 @@ impl SubscriptionContract {
     // Billing
     // -------------------------------------------------------------------------
 
-    /// Charge a single subscriber. Permissionless — any relayer can call this.
+    /// Charge a single subscriber. Permissionless - any relayer can call this.
     /// The keeper (caller) receives keeper_fee_bps of the payment.
     pub fn charge_subscriber(
         env: Env,
@@ -174,3 +174,4 @@ impl SubscriptionContract {
         batch_charge(&env, subscription_ids, keeper)
     }
 }
+

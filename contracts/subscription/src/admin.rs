@@ -1,4 +1,4 @@
-//! Admin functions: initialize, pause/unpause, transfer admin, set keeper fee.
+﻿//! Admin functions: initialize, pause/unpause, transfer admin, set keeper fee.
 use soroban_sdk::{Address, Env};
 
 use crate::{
@@ -106,3 +106,4 @@ pub fn transfer_admin(env: &Env, new_admin: Address) -> Result<(), SubscriptionE
     save_config(env, &config);
     Ok(())
 }
+

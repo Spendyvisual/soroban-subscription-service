@@ -1,4 +1,4 @@
-//! Storage key definitions and TTL management helpers.
+﻿//! Storage key definitions and TTL management helpers.
 use soroban_sdk::{contracttype, Env};
 
 /// Maximum TTL for instance storage entries (approximately 30 days of ledgers).
@@ -39,3 +39,4 @@ pub fn bump_persistent(env: &Env, key: &StorageKey) {
         .persistent()
         .extend_ttl(key, PERSISTENT_TTL_THRESHOLD, PERSISTENT_TTL_BUMP);
 }
+

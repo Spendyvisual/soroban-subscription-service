@@ -1,4 +1,4 @@
-//! Plan management: create, update, deactivate, and query subscription plans.
+﻿//! Plan management: create, update, deactivate, and query subscription plans.
 use soroban_sdk::{Address, Env, String};
 
 use crate::{
@@ -130,3 +130,4 @@ pub fn get_plan(env: &Env, plan_id: u32) -> Result<Plan, SubscriptionError> {
         .get::<StorageKey, Plan>(&StorageKey::Plan(plan_id))
         .ok_or(SubscriptionError::PlanNotFound)
 }
+

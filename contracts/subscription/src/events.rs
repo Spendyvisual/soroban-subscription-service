@@ -1,4 +1,4 @@
-//! Typed event helpers for the Soroban Subscription Service.
+﻿//! Typed event helpers for the Soroban Subscription Service.
 //!
 //! All state-changing operations emit events so off-chain indexers (and the
 //! future relayer bot) can efficiently track subscription state without
@@ -81,3 +81,4 @@ pub fn paused(env: &Env, is_paused: bool) {
         is_paused,
     );
 }
+

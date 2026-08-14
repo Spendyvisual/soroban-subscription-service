@@ -1,10 +1,10 @@
-//! Billing engine: charge_subscriber and batch_charge.
+ï»¿//! Billing engine: charge_subscriber and batch_charge.
 //!
 //! Phase 1 Note:
-//! The actual Stellar Asset Contract (SAC) `transfer_from` call is structured
+//! The actual Stellar Asset Contract (SAC) transfer_from call is structured
 //! and present in this module. In unit tests, the token client is mocked via
 //! soroban_sdk testutils. In Phase 2, only the provider/SAC address wiring
-//! needs to change — the logic stays identical.
+//! needs to change - the logic stays identical.
 use soroban_sdk::{token, Address, Env, Vec};
 
 use crate::{
@@ -23,19 +23,19 @@ pub const MAX_BATCH_SIZE: u32 = 50;
 /// Charge a single subscriber for their current billing period.
 ///
 /// This function is **permissionless**: any account can call it (typically a
-/// relayer/keeper bot). The keeper earns `keeper_fee_bps` of the charge amount
-/// transferred directly to `env.current_contract_address()` invoker — wait,
-/// to `env.invoker()` — actually in Soroban we use the transaction source
+/// relayer/keeper bot). The keeper earns keeper_fee_bps of the charge amount
+/// transferred directly to env.current_contract_address() invoker - wait,
+/// to env.invoker() - actually in Soroban we use the transaction source
 /// as fee recipient since invoker isn't exposed. The keeper fee goes to the
 /// caller of this function (the relayer).
 ///
 /// # Charging Logic
-/// 1. Load subscription — error if not found.
-/// 2. Check status == Active — error if Cancelled.
-/// 3. Check now >= next_billing_ts — error if NotDue.
-/// 4. Check now <= next_billing_ts + grace_period — if exceeded, mark PastDue.
+/// 1. Load subscription - error if not found.
+/// 2. Check status == Active - error if Cancelled.
+/// 3. Check now >= next_billing_ts - error if NotDue.
+/// 4. Check now <= next_billing_ts + grace_period - if exceeded, mark PastDue.
 /// 5. Apply pending plan change if present.
-/// 6. Load plan — get price_amount, price_asset, interval.
+/// 6. Load plan - get price_amount, price_asset, interval.
 /// 7. Compute keeper_fee and net_amount.
 /// 8. Call SAC.transfer_from(subscriber, provider, net_amount).
 /// 9. Update next_billing_ts += interval_secs; bump TTL.
@@ -133,7 +133,7 @@ pub fn charge_subscriber(
 /// Charge multiple subscriptions in a single transaction.
 ///
 /// Returns a vector of results in the same order as the input IDs.
-/// Individual failures do NOT abort the batch — the result vector indicates
+/// Individual failures do NOT abort the batch - the result vector indicates
 /// which charges succeeded and which failed.
 pub fn batch_charge(
     env: &Env,
@@ -153,3 +153,4 @@ pub fn batch_charge(
     }
     Ok(receipts)
 }
+

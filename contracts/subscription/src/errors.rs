@@ -1,4 +1,4 @@
-//! Error types for the Soroban Subscription Service contract.
+﻿//! Error types for the Soroban Subscription Service contract.
 use soroban_sdk::contracterror;
 
 #[contracterror]
@@ -36,3 +36,4 @@ pub enum SubscriptionError {
     /// Batch charge vector is empty or too large.
     InvalidBatchSize = 15,
 }
+
