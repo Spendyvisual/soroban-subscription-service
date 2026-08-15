@@ -1,4 +1,5 @@
 ﻿import { Routes, Route, Link } from 'react-router-dom';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 function Landing() {
   return (
@@ -37,8 +38,22 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
-      <Route path="/provider/*" element={<ProviderDashboard />} />
-      <Route path="/portal/*" element={<SubscriberPortal />} />
+      <Route
+        path="/provider/*"
+        element={
+          <ErrorBoundary>
+            <ProviderDashboard />
+          </ErrorBoundary>
+        }
+      />
+      <Route
+        path="/portal/*"
+        element={
+          <ErrorBoundary>
+            <SubscriberPortal />
+          </ErrorBoundary>
+        }
+      />
     </Routes>
   );
 }
