@@ -1,4 +1,5 @@
 ﻿import { Routes, Route, Link } from 'react-router-dom';
+import { ToastContainer } from './components/Toast';
 
 function Landing() {
   return (
@@ -35,11 +36,14 @@ function SubscriberPortal() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/provider/*" element={<ProviderDashboard />} />
-      <Route path="/portal/*" element={<SubscriberPortal />} />
-    </Routes>
+    <>
+      <ToastContainer />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/provider/*" element={<ProviderDashboard />} />
+        <Route path="/portal/*" element={<SubscriberPortal />} />
+      </Routes>
+    </>
   );
 }
 
